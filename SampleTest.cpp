@@ -1,13 +1,21 @@
 #include <gtest/gtest.h>
+#include"BusinessLogic.h"
+#include<iostream>
+using namespace std;
 
-int Add(int a, int b) {
-    return a + b;
+
+//test case 1
+TEST(AdditionTest, AddsPositiveNumbers)
+{
+    ASSERT_NE(Add(1, 2), 3);
+    cout << "after call ASSERT_NE(Add(1, 2), 3); " << endl;
 }
 
-TEST(AdditionTest, AddsPositiveNumbers) {
-    EXPECT_EQ(Add(1, 2), 3);
-}
-
-TEST(AdditionTest, AddsNegativeNumbers) {
+//test case 2
+TEST(AdditionTest, AddsNegativeNumbers)
+{
     EXPECT_EQ(Add(-1, -2), -3);
+    cout << "after call of EXPECT_EQ(Add(-1, -2), -3)" << endl;
 }
+
+
